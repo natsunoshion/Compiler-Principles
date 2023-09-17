@@ -1,0 +1,214 @@
+In file included from /usr/include/wchar.h:30,
+                 from /usr/include/c++/11/cwchar:44,
+                 from /usr/include/c++/11/bits/postypes.h:40,
+                 from /usr/include/c++/11/iosfwd:40,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:74:70: error: unknown machine mode ‘__TC__’
+   74 | typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));
+      |                                                                      ^
+In file included from /usr/include/wchar.h:30,
+                 from /usr/include/c++/11/cwchar:44,
+                 from /usr/include/c++/11/bits/postypes.h:40,
+                 from /usr/include/c++/11/iosfwd:40,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:86:9: error: ‘__float128’ does not name a type; did you mean ‘__cfloat128’?
+   86 | typedef __float128 _Float128;
+      |         ^~~~~~~~~~
+      |         __cfloat128
+In file included from /usr/include/c++/11/cwchar:44,
+                 from /usr/include/c++/11/bits/postypes.h:40,
+                 from /usr/include/c++/11/iosfwd:40,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/wchar.h:407:8: error: ‘_Float128’ does not name a type; did you mean ‘_Float32x’?
+  407 | extern _Float128 wcstof128 (const wchar_t *__restrict __nptr,
+      |        ^~~~~~~~~
+      |        _Float32x
+In file included from /usr/include/c++/11/cwchar:44,
+                 from /usr/include/c++/11/bits/postypes.h:40,
+                 from /usr/include/c++/11/iosfwd:40,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/wchar.h:524:8: error: ‘_Float128’ does not name a type; did you mean ‘_Float32x’?
+  524 | extern _Float128 wcstof128_l (const wchar_t *__restrict __nptr,
+      |        ^~~~~~~~~
+      |        _Float32x
+In file included from /usr/include/c++/11/bits/exception_ptr.h:40,
+                 from /usr/include/c++/11/exception:153,
+                 from /usr/include/c++/11/ios:39,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/new:89:27: error: different underlying type in enum ‘enum class std::align_val_t’
+   89 |   enum class align_val_t: size_t {};
+      |                           ^~~~~~
+<built-in>: note: previous definition here
+In file included from /usr/include/c++/11/bits/exception_ptr.h:40,
+                 from /usr/include/c++/11/exception:153,
+                 from /usr/include/c++/11/ios:39,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/new:126:25: error: ‘operator new’ takes type ‘size_t’ (‘unsigned int’) as first parameter [-fpermissive]
+  126 | _GLIBCXX_NODISCARD void* operator new(std::size_t) _GLIBCXX_THROW (std::bad_alloc)
+      |                         ^~~~~~~~
+/usr/include/c++/11/new:128:25: error: ‘operator new’ takes type ‘size_t’ (‘unsigned int’) as first parameter [-fpermissive]
+  128 | _GLIBCXX_NODISCARD void* operator new[](std::size_t) _GLIBCXX_THROW (std::bad_alloc)
+      |                         ^~~~~~~~
+/usr/include/c++/11/new:140:25: error: ‘operator new’ takes type ‘size_t’ (‘unsigned int’) as first parameter [-fpermissive]
+  140 | _GLIBCXX_NODISCARD void* operator new(std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT
+      |                         ^~~~~~~~
+/usr/include/c++/11/new:142:25: error: ‘operator new’ takes type ‘size_t’ (‘unsigned int’) as first parameter [-fpermissive]
+  142 | _GLIBCXX_NODISCARD void* operator new[](std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT
+      |                         ^~~~~~~~
+/usr/include/c++/11/new:149:25: error: ‘operator new’ takes type ‘size_t’ (‘unsigned int’) as first parameter [-fpermissive]
+  149 | _GLIBCXX_NODISCARD void* operator new(std::size_t, std::align_val_t)
+      |                         ^~~~~~~~
+/usr/include/c++/11/new:151:25: error: ‘operator new’ takes type ‘size_t’ (‘unsigned int’) as first parameter [-fpermissive]
+  151 | _GLIBCXX_NODISCARD void* operator new(std::size_t, std::align_val_t, const std::nothrow_t&)
+      |                         ^~~~~~~~
+/usr/include/c++/11/new:157:25: error: ‘operator new’ takes type ‘size_t’ (‘unsigned int’) as first parameter [-fpermissive]
+  157 | _GLIBCXX_NODISCARD void* operator new[](std::size_t, std::align_val_t)
+      |                         ^~~~~~~~
+/usr/include/c++/11/new:159:25: error: ‘operator new’ takes type ‘size_t’ (‘unsigned int’) as first parameter [-fpermissive]
+  159 | _GLIBCXX_NODISCARD void* operator new[](std::size_t, std::align_val_t, const std::nothrow_t&)
+      |                         ^~~~~~~~
+/usr/include/c++/11/new:174:32: error: ‘operator new’ takes type ‘size_t’ (‘unsigned int’) as first parameter [-fpermissive]
+  174 | _GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+      |                                ^~~~~~~~
+/usr/include/c++/11/new:176:32: error: ‘operator new’ takes type ‘size_t’ (‘unsigned int’) as first parameter [-fpermissive]
+  176 | _GLIBCXX_NODISCARD inline void* operator new[](std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+      |                                ^~~~~~~~
+In file included from /usr/include/c++/11/bits/move.h:57,
+                 from /usr/include/c++/11/bits/exception_ptr.h:43,
+                 from /usr/include/c++/11/exception:153,
+                 from /usr/include/c++/11/ios:39,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/type_traits:354:41: error: template argument 1 is invalid
+  354 |     struct __is_integral_helper<__GLIBCXX_TYPE_INT_N_0>
+      |                                         ^
+/usr/include/c++/11/type_traits:358:50: error: template argument 1 is invalid
+  358 |     struct __is_integral_helper<unsigned __GLIBCXX_TYPE_INT_N_0>
+      |                                                  ^
+In file included from /usr/include/c++/11/bits/move.h:57,
+                 from /usr/include/c++/11/bits/exception_ptr.h:43,
+                 from /usr/include/c++/11/exception:153,
+                 from /usr/include/c++/11/ios:39,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/type_traits:415:39: error: ‘__float128’ was not declared in this scope; did you mean ‘__cfloat128’?
+  415 |     struct __is_floating_point_helper<__float128>
+      |                                       ^~~~~~~~~~
+      |                                       __cfloat128
+/usr/include/c++/11/type_traits:415:49: error: template argument 1 is invalid
+  415 |     struct __is_floating_point_helper<__float128>
+      |                                                 ^
+In file included from /usr/include/c++/11/bits/move.h:57,
+                 from /usr/include/c++/11/bits/exception_ptr.h:43,
+                 from /usr/include/c++/11/exception:153,
+                 from /usr/include/c++/11/ios:39,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/type_traits:637:11: error: template argument 7 is invalid
+  637 |           >;
+      |           ^
+In file included from /usr/include/c++/11/bits/move.h:57,
+                 from /usr/include/c++/11/bits/exception_ptr.h:43,
+                 from /usr/include/c++/11/exception:153,
+                 from /usr/include/c++/11/ios:39,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/type_traits:656:11: error: template argument 7 is invalid
+  656 |           >;
+      |           ^
+/usr/include/c++/11/type_traits:661:15: error: ‘__is_signed_integer’ was not declared in this scope
+  661 |       = __or_<__is_signed_integer<_Tp>, __is_unsigned_integer<_Tp>>;
+      |               ^~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/type_traits:661:38: error: template argument 1 is invalid
+  661 |       = __or_<__is_signed_integer<_Tp>, __is_unsigned_integer<_Tp>>;
+      |                                      ^
+In file included from /usr/include/c++/11/bits/move.h:57,
+                 from /usr/include/c++/11/bits/exception_ptr.h:43,
+                 from /usr/include/c++/11/exception:153,
+                 from /usr/include/c++/11/ios:39,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/type_traits:1716:36: error: template argument 1 is invalid
+ 1716 |     struct __make_unsigned<__GLIBCXX_TYPE_INT_N_0>
+      |                                    ^
+In file included from /usr/include/c++/11/bits/move.h:57,
+                 from /usr/include/c++/11/bits/exception_ptr.h:43,
+                 from /usr/include/c++/11/exception:153,
+                 from /usr/include/c++/11/ios:39,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/type_traits:1872:43: error: template argument 1 is invalid
+ 1872 |     struct __make_signed<unsigned __GLIBCXX_TYPE_INT_N_0>
+      |                                           ^
+In file included from /usr/include/c++/11/bits/stl_algobase.h:61,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/ios:40,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/bits/cpp_type_traits.h:270:40: error: template argument 1 is invalid
+  270 | __INT_N(__GLIBCXX_TYPE_INT_N_0)
+      |                                        ^
+/usr/include/c++/11/bits/cpp_type_traits.h:270:145: error: template argument 1 is invalid
+  270 | __INT_N(__GLIBCXX_TYPE_INT_N_0)
+      |                                                                                                                                                 ^
+In file included from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/ios:40,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/bits/stl_algobase.h:1017:20: error: expected unqualified-id before ‘__int128’
+ 1017 |   inline _GLIBCXX_CONSTEXPR __GLIBCXX_TYPE_INT_N_0
+      |                    ^~~~~~~~
+/usr/include/c++/11/bits/stl_algobase.h:1019:29: error: expected unqualified-id before ‘__int128’
+ 1019 |   inline _GLIBCXX_CONSTEXPR unsigned __GLIBCXX_TYPE_INT_N_0
+      |                             ^~~~~~~~
+In file included from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/ios:40,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/bits/stl_algobase.h:1049:21: error: ‘constexpr const long long int std::__size_to_integer’ redeclared as different kind of entity
+ 1049 |   __size_to_integer(__float128 __n) { return (long long)__n; }
+      |                     ^~~~~~~~~~
+/usr/include/c++/11/bits/stl_algobase.h:1046:3: note: previous declaration ‘constexpr long long int std::__size_to_integer(long double)’
+ 1046 |   __size_to_integer(long double __n) { return (long long)__n; }
+      |   ^~~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/stl_algobase.h:1049:21: error: ‘__float128’ was not declared in this scope; did you mean ‘__cfloat128’?
+ 1049 |   __size_to_integer(__float128 __n) { return (long long)__n; }
+      |                     ^~~~~~~~~~
+      |                     __cfloat128
+In file included from /usr/include/c++/11/bits/range_access.h:36,
+                 from /usr/include/c++/11/string:54,
+                 from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from main.cpp:1:
+/usr/include/c++/11/initializer_list:47:11: fatal error: definition of ‘class std::initializer_list<_E>’ does not match ‘#include <initializer_list>’
+   47 |     class initializer_list
+      |           ^~~~~~~~~~~~~~~~
+compilation terminated.
