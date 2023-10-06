@@ -1,45 +1,22 @@
-// 常量声明、初始化
-// 浮点数常量及运算
-const float RADIUS = 5.5, PI = 3.141592653589793, EPS = 1e-6;
-
-// 函数
-float circle_area(int radius)
-{
-    return (PI * radius * radius + (radius * radius) * PI) / 2;
-}
-
 int main()
 {
-    // 数据类型 int
-    // 变量初始化
-    int i = 1, p = 0;
-    // 浮点数变量
-    // 数组
-    float arr[10] = {1.0};
-    int len       = getfarray(arr); // 获取数组长度
+    int a, b, i, t, n;
 
-    // 语句
-    while (1) {
-        // 输入输出
-        float input = getfloat();
-        float area = PI * input * input;
-        int area_trunc = circle_area(input);
-        arr[p] = arr[p] + input;
-
-        putfloat(area);
-        putch(32);
-        putint(area_trunc);
-
-        putch(10);
-        i = i * 10;
-        p = p + 1;
-
-        // break 和 continue 语句
-        if (i == 1e9)
-            break;
-        else
-            continue;
+    a = 0;
+    b = 1;
+    i = 1;
+    n = getint();
+    // putf("%d\n%d\n", a, b);
+    putint(a);
+    putint(b);
+    while (i < n)
+    {
+        t = b;
+        b = a + b;
+        // putf("%d\n", b);
+        putint(b);
+        a = t;
+        i = i + 1;
     }
-    putfarray(len, arr); // 输出浮点数数组
     return 0;
 }

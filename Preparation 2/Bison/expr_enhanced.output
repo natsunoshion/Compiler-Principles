@@ -1,0 +1,328 @@
+Grammar
+
+    0 $accept: lines $end
+
+    1 lines: lines stmt ';'
+    2      | lines ';'
+    3      | ε
+
+    4 stmt: VAR ASSIGN expr
+    5     | expr
+
+    6 expr: VAR
+    7     | expr ADD expr
+    8     | expr MINUS expr
+    9     | expr MUL expr
+   10     | expr DIV expr
+   11     | LPAREN expr RPAREN
+   12     | MINUS expr
+   13     | NUMBER
+
+
+Terminals, with rules where they appear
+
+    $end (0) 0
+    ';' (59) 1 2
+    error (256)
+    ADD (258) 7
+    MINUS (259) 8 12
+    MUL (260) 9
+    DIV (261) 10
+    LPAREN (262) 11
+    RPAREN (263) 11
+    ASSIGN (264) 4
+    NUMBER <dval> (265) 13
+    VAR <sval> (266) 4 6
+    UMINUS (267)
+
+
+Nonterminals, with rules where they appear
+
+    $accept (14)
+        on left: 0
+    lines (15)
+        on left: 1 2 3
+        on right: 0 1 2
+    stmt <dval> (16)
+        on left: 4 5
+        on right: 1
+    expr <dval> (17)
+        on left: 6 7 8 9 10 11 12 13
+        on right: 4 5 7 8 9 10 11 12
+
+
+State 0
+
+    0 $accept: • lines $end
+
+    $default  reduce using rule 3 (lines)
+
+    lines  go to state 1
+
+
+State 1
+
+    0 $accept: lines • $end
+    1 lines: lines • stmt ';'
+    2      | lines • ';'
+
+    $end    shift, and go to state 2
+    MINUS   shift, and go to state 3
+    LPAREN  shift, and go to state 4
+    NUMBER  shift, and go to state 5
+    VAR     shift, and go to state 6
+    ';'     shift, and go to state 7
+
+    stmt  go to state 8
+    expr  go to state 9
+
+
+State 2
+
+    0 $accept: lines $end •
+
+    $default  accept
+
+
+State 3
+
+   12 expr: MINUS • expr
+
+    MINUS   shift, and go to state 3
+    LPAREN  shift, and go to state 4
+    NUMBER  shift, and go to state 5
+    VAR     shift, and go to state 10
+
+    expr  go to state 11
+
+
+State 4
+
+   11 expr: LPAREN • expr RPAREN
+
+    MINUS   shift, and go to state 3
+    LPAREN  shift, and go to state 4
+    NUMBER  shift, and go to state 5
+    VAR     shift, and go to state 10
+
+    expr  go to state 12
+
+
+State 5
+
+   13 expr: NUMBER •
+
+    $default  reduce using rule 13 (expr)
+
+
+State 6
+
+    4 stmt: VAR • ASSIGN expr
+    6 expr: VAR •
+
+    ASSIGN  shift, and go to state 13
+
+    $default  reduce using rule 6 (expr)
+
+
+State 7
+
+    2 lines: lines ';' •
+
+    $default  reduce using rule 2 (lines)
+
+
+State 8
+
+    1 lines: lines stmt • ';'
+
+    ';'  shift, and go to state 14
+
+
+State 9
+
+    5 stmt: expr •
+    7 expr: expr • ADD expr
+    8     | expr • MINUS expr
+    9     | expr • MUL expr
+   10     | expr • DIV expr
+
+    ADD    shift, and go to state 15
+    MINUS  shift, and go to state 16
+    MUL    shift, and go to state 17
+    DIV    shift, and go to state 18
+
+    $default  reduce using rule 5 (stmt)
+
+
+State 10
+
+    6 expr: VAR •
+
+    $default  reduce using rule 6 (expr)
+
+
+State 11
+
+    7 expr: expr • ADD expr
+    8     | expr • MINUS expr
+    9     | expr • MUL expr
+   10     | expr • DIV expr
+   12     | MINUS expr •
+
+    $default  reduce using rule 12 (expr)
+
+
+State 12
+
+    7 expr: expr • ADD expr
+    8     | expr • MINUS expr
+    9     | expr • MUL expr
+   10     | expr • DIV expr
+   11     | LPAREN expr • RPAREN
+
+    ADD     shift, and go to state 15
+    MINUS   shift, and go to state 16
+    MUL     shift, and go to state 17
+    DIV     shift, and go to state 18
+    RPAREN  shift, and go to state 19
+
+
+State 13
+
+    4 stmt: VAR ASSIGN • expr
+
+    MINUS   shift, and go to state 3
+    LPAREN  shift, and go to state 4
+    NUMBER  shift, and go to state 5
+    VAR     shift, and go to state 10
+
+    expr  go to state 20
+
+
+State 14
+
+    1 lines: lines stmt ';' •
+
+    $default  reduce using rule 1 (lines)
+
+
+State 15
+
+    7 expr: expr ADD • expr
+
+    MINUS   shift, and go to state 3
+    LPAREN  shift, and go to state 4
+    NUMBER  shift, and go to state 5
+    VAR     shift, and go to state 10
+
+    expr  go to state 21
+
+
+State 16
+
+    8 expr: expr MINUS • expr
+
+    MINUS   shift, and go to state 3
+    LPAREN  shift, and go to state 4
+    NUMBER  shift, and go to state 5
+    VAR     shift, and go to state 10
+
+    expr  go to state 22
+
+
+State 17
+
+    9 expr: expr MUL • expr
+
+    MINUS   shift, and go to state 3
+    LPAREN  shift, and go to state 4
+    NUMBER  shift, and go to state 5
+    VAR     shift, and go to state 10
+
+    expr  go to state 23
+
+
+State 18
+
+   10 expr: expr DIV • expr
+
+    MINUS   shift, and go to state 3
+    LPAREN  shift, and go to state 4
+    NUMBER  shift, and go to state 5
+    VAR     shift, and go to state 10
+
+    expr  go to state 24
+
+
+State 19
+
+   11 expr: LPAREN expr RPAREN •
+
+    $default  reduce using rule 11 (expr)
+
+
+State 20
+
+    4 stmt: VAR ASSIGN expr •
+    7 expr: expr • ADD expr
+    8     | expr • MINUS expr
+    9     | expr • MUL expr
+   10     | expr • DIV expr
+
+    ADD    shift, and go to state 15
+    MINUS  shift, and go to state 16
+    MUL    shift, and go to state 17
+    DIV    shift, and go to state 18
+
+    $default  reduce using rule 4 (stmt)
+
+
+State 21
+
+    7 expr: expr • ADD expr
+    7     | expr ADD expr •
+    8     | expr • MINUS expr
+    9     | expr • MUL expr
+   10     | expr • DIV expr
+
+    MUL  shift, and go to state 17
+    DIV  shift, and go to state 18
+
+    $default  reduce using rule 7 (expr)
+
+
+State 22
+
+    7 expr: expr • ADD expr
+    8     | expr • MINUS expr
+    8     | expr MINUS expr •
+    9     | expr • MUL expr
+   10     | expr • DIV expr
+
+    MUL  shift, and go to state 17
+    DIV  shift, and go to state 18
+
+    $default  reduce using rule 8 (expr)
+
+
+State 23
+
+    7 expr: expr • ADD expr
+    8     | expr • MINUS expr
+    9     | expr • MUL expr
+    9     | expr MUL expr •
+   10     | expr • DIV expr
+
+    $default  reduce using rule 9 (expr)
+
+
+State 24
+
+    7 expr: expr • ADD expr
+    8     | expr • MINUS expr
+    9     | expr • MUL expr
+   10     | expr • DIV expr
+   10     | expr DIV expr •
+
+    $default  reduce using rule 10 (expr)

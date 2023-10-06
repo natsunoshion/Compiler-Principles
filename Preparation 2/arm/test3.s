@@ -58,4 +58,4 @@ main:
 _bridge:
 	.word f
 
-	.section .note.GNU-stack,"",%progbits
+	.section .note.GNU-stack,"",%

@@ -1,5 +1,0 @@
-int main()
-{
-    putfloat(10.0);
-    return 0;
-}
